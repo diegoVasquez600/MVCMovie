@@ -8,8 +8,8 @@ namespace MVCMovie.Models
         public int IdMovie { get; set; }
         [StringLength(100)]
         public string Title { get; set; } = string.Empty;
-        [StringLength(100)]
-        public string Genre { get; set; } = string.Empty;
+        public int GenreId { get; set; }
+        public virtual Genre? Genre { get; set; }
         public int Year { get; set; }
     }
 }
